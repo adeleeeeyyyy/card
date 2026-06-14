@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adly Fahreza / Portal Hub</title>
+  <meta name="description" content="Editorial digital linktree portal for Adly Fahreza. Simple connections, social outposts, and music.">
+  
+  <!-- Modern Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS v4 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+  <style type="text/css">
+    :root {
+      --color-ink: #111111;
+      --color-canvas: #ffffff;
+      --color-accent-pink: #ef233c;
+      --color-accent-blue: #3a86c8;
+      --color-hairline: #111111;
+
+      --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'Space Mono', monospace;
+      --font-outfit: 'Outfit', sans-serif;
+    }
+
+    html {
+      font-size: 13px;
+    }
+
+    @media (min-width: 768px) {
+      html {
+        font-size: 11px;
+      }
+    }
+
+    body {
+      font-family: var(--font-inter);
+      background-color: var(--color-canvas);
+      color: var(--color-ink);
+    }
+
+    .border-ink {
+      border-color: var(--color-ink) !important;
+    }
+    .divide-ink > :not([hidden]) ~ :not([hidden]) {
+      border-color: var(--color-ink) !important;
+    }
+
+    /* Subtle Scanlines for Retro Aesthetic */
+    .scanlines {
+      position: relative;
+    }
+    .scanlines::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(17, 17, 17, 0) 50%, rgba(17, 17, 17, 0.05) 50%);
+      background-size: 100% 4px;
+      pointer-events: none;
+      z-index: 15;
+    }
+
+    /* CRT Screen & Blending Effects */
+    .crt-screen {
+      position: relative;
+    }
+    .crt-screen::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(17, 17, 17, 0) 50%, rgba(17, 17, 17, 0.15) 50%),
+                  linear-gradient(90deg, rgba(255, 0, 0, 0.05), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.05));
+      background-size: 100% 3px, 6px 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .crt-screen::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle, transparent 65%, rgba(0, 0, 0, 0.4) 150%);
+      pointer-events: none;
+      z-index: 3;
+    }
+    .crt-image {
+      filter: grayscale(100%) contrast(140%) brightness(100%);
+      mix-blend-mode: multiply;
+    }
+  </style>
+</head>
+<body class="bg-canvas text-ink antialiased min-h-screen flex flex-col justify-center py-6 px-4 md:px-8 selection:bg-rose-500 selection:text-white">
+
+  <div class="max-w-7xl w-full mx-auto flex flex-col gap-8 md:gap-12 py-6 md:py-12">
+    
+    <!-- Top Header Bar -->
+    <header class="flex justify-between items-end border-b border-ink pb-2 mb-2 font-mono text-[10px] sm:text-xs md:text-base uppercase tracking-wider">
+      <div class="flex items-center gap-1.5">
+        <span class="text-gray-400">instagram</span>
+        <a href="https://instagram.com/justshikoo" target="_blank" class="hover:underline font-bold text-ink">@adeleeeeyyyy</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="hover:underline font-bold text-ink tracking-widest">夢の世界へ戻る</a>
+        <span class="bg-ink text-canvas font-bold px-2.5 py-0.5 rounded-sm">©2026</span>
+      </div>
+    </header>
+
+    <!-- Giant Cover Title -->
+    <section class="select-none my-1">
+      <h1 class="font-outfit text-3xl sm:text-5xl md:text-[8rem] lg:text-[9.5rem] font-black tracking-tighter leading-[0.82] text-ink uppercase text-left">
+        The Digital Attic
+      </h1>
+    </section>
+
+    <!-- Main Content Section: Side-by-Side Column Grid -->
+    <section class="grid grid-cols-10 gap-4 md:gap-8 my-4 md:my-8">
+      
+      <!-- Left Column: Portrait and Info Card -->
+      <div class="flex flex-col gap-6 col-span-6 md:col-span-3">
+        
+        <!-- CRT Portrait Cover -->
+        <div class="relative w-full aspect-[4/5] border border-ink rounded-md bg-[#ef233c] overflow-hidden scanlines crt-screen mx-auto">
+          <!-- Background Split -->
+          <div class="absolute inset-0 flex">
+            <!-- Left Magenta block -->
+            <div class="w-[82%] bg-[#ef233c]"></div>
+            <!-- Right white block with rotated text -->
+            <div class="w-[18%] bg-canvas flex items-center justify-center border-l border-ink">
+              <span class="font-outfit font-black text-ink tracking-widest text-[9px] sm:text-sm md:text-lg uppercase -rotate-90 select-none pointer-events-none whitespace-nowrap">Himro.</span>
+            </div>
+          </div>
+          
+          <!-- Blended Face Image -->
+          <div class="absolute top-0 left-0 w-[82%] h-full flex items-center justify-center z-10 pointer-events-none select-none">
+            <div class="relative h-[120%] aspect-[4/5] overflow-hidden rounded">
+              <img src="assets/face.png" alt="Adly's Portrait" class="w-full h-full object-cover crt-image">
+            </div>
+          </div>
+        </div>
+
+        <!-- Info/Status Card (Hidden on Mobile) -->
+        <div class="hidden md:flex border border-ink p-6 bg-canvas flex-col gap-4">
+          <div class="flex justify-between items-center border-b border-ink pb-3">
+            <span class="font-mono text-xs font-bold text-ink">SYSTEM STATUS</span>
+            <span class="font-mono text-xs bg-emerald-600 text-white font-bold px-2 py-0.5 rounded-sm">ONLINE</span>
+          </div>
+          <p class="text-sm text-gray-700 leading-relaxed font-sans">
+            Hi, I'm Adly. Welcome to my central links directory. Here are the channels where I share music, code, and thoughts.
+          </p>
+          <div class="flex flex-col gap-1 font-mono text-xs text-gray-500 pt-2 border-t border-dashed border-gray-200">
+            <div>LOCATION: BOGOR, INDONESIA</div>
+            <div>COORDINATES: -6.5971, 106.8060</div>
+            <div>ESTABLISHED: 2008</div>
+          </div>
+        </div>
+      </div>
+      <!-- Right Column: Links Listing -->
+      <div class="flex flex-col gap-3 md:gap-4 col-span-4 md:col-span-7">
+        
+        <!-- Link 1: Main Portfolio Home -->
+        <a href="index.html" class="flex-1 group relative flex justify-between items-center border border-ink p-2.5 md:p-6 bg-canvas hover:bg-ink hover:text-canvas transition-all duration-300 transform hover:-translate-y-1">
+          <div class="flex flex-col">
+            <div class="font-mono text-[8px] sm:text-[9px] md:text-xs text-gray-400 group-hover:text-rose-400 transition-colors mb-0.5 md:mb-1">
+              [01] <span class="hidden md:inline">MAIN PORTFOLIO</span><span class="md:hidden">PORTFOLIO</span>
+            </div>
+            <h2 class="font-outfit text-[10px] sm:text-base md:text-xl lg:text-2xl font-black uppercase tracking-tight leading-none">
+              <span class="hidden md:inline">Return to Home</span><span class="md:hidden">Return Home</span>
+            </h2>
+          </div>
+          <div class="flex-shrink-0 ml-1 md:ml-2 text-ink group-hover:text-canvas transition-colors">
+            <svg class="w-5 h-5 md:w-8 md:h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Link 2: GitHub -->
+        <a href="https://github.com/adeleeeeyyyy" target="_blank" class="flex-1 group relative flex justify-between items-center border border-ink p-2.5 md:p-6 bg-canvas hover:bg-ink hover:text-canvas transition-all duration-300 transform hover:-translate-y-1">
+          <div class="flex flex-col">
+            <div class="font-mono text-[8px] sm:text-[9px] md:text-xs text-gray-400 group-hover:text-blue-400 transition-colors mb-0.5 md:mb-1">
+              [02] <span class="hidden md:inline">SOURCE ARCHIVE</span><span class="md:hidden">GITHUB</span>
+            </div>
+            <h2 class="font-outfit text-[10px] sm:text-base md:text-xl lg:text-2xl font-black uppercase tracking-tight leading-none">
+              <span class="hidden md:inline">GitHub Profile</span><span class="md:hidden">GitHub</span>
+            </h2>
+          </div>
+          <div class="flex-shrink-0 ml-1 md:ml-2 text-ink group-hover:text-canvas transition-colors">
+            <svg class="w-5 h-5 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Link 3: Instagram -->
+        <a href="https://instagram.com/justshikoo" target="_blank" class="flex-1 group relative flex justify-between items-center border border-ink p-2.5 md:p-6 bg-canvas hover:bg-[#ef233c] hover:text-white transition-all duration-300 transform hover:-translate-y-1">
+          <div class="flex flex-col">
+            <div class="font-mono text-[8px] sm:text-[9px] md:text-xs text-gray-400 group-hover:text-yellow-300 transition-colors mb-0.5 md:mb-1">
+              [03] <span class="hidden md:inline">SOCIAL CHANNEL</span><span class="md:hidden">INSTAGRAM</span>
+            </div>
+            <h2 class="font-outfit text-[10px] sm:text-base md:text-xl lg:text-2xl font-black uppercase tracking-tight leading-none">Instagram</h2>
+          </div>
+          <div class="flex-shrink-0 ml-1 md:ml-2 text-ink group-hover:text-white transition-colors">
+            <svg class="w-5 h-5 md:w-8 md:h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Link 4: LinkedIn -->
+        <a href="https://linkedin.com" target="_blank" class="flex-1 group relative flex justify-between items-center border border-ink p-2.5 md:p-6 bg-canvas hover:bg-[#3a86c8] hover:text-white transition-all duration-300 transform hover:-translate-y-1">
+          <div class="flex flex-col">
+            <div class="font-mono text-[8px] sm:text-[9px] md:text-xs text-gray-400 group-hover:text-sky-200 transition-colors mb-0.5 md:mb-1">
+              [04] <span class="hidden md:inline">PROFESSIONAL HUB</span><span class="md:hidden">LINKEDIN</span>
+            </div>
+            <h2 class="font-outfit text-[10px] sm:text-base md:text-xl lg:text-2xl font-black uppercase tracking-tight leading-none">
+              <span class="hidden md:inline">LinkedIn Profile</span><span class="md:hidden">LinkedIn</span>
+            </h2>
+          </div>
+          <div class="flex-shrink-0 ml-1 md:ml-2 text-ink group-hover:text-white transition-colors">
+            <svg class="w-5 h-5 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Link 5: picoCTF -->
+        <a href="https://play.picoctf.org" target="_blank" class="flex-1 group relative flex justify-between items-center border border-ink p-2.5 md:p-6 bg-canvas hover:bg-[#ef233c] hover:text-white transition-all duration-300 transform hover:-translate-y-1">
+          <div class="flex flex-col">
+            <div class="font-mono text-[8px] sm:text-[9px] md:text-xs text-gray-400 group-hover:text-yellow-200 transition-colors mb-0.5 md:mb-1">
+              [05] <span class="hidden md:inline">CYBER OUTPOST</span><span class="md:hidden">picoCTF</span>
+            </div>
+            <h2 class="font-outfit text-[10px] sm:text-base md:text-xl lg:text-2xl font-black uppercase tracking-tight leading-none">
+              <span class="hidden md:inline">picoCTF Profile</span><span class="md:hidden">picoCTF</span>
+            </h2>
+          </div>
+          <div class="flex-shrink-0 ml-1 md:ml-2 text-ink group-hover:text-white transition-colors">
+            <svg class="w-5 h-5 md:w-8 md:h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M3 20h18a1 1 0 001-1V5a1 1 0 00-1-1H3a1 1 0 00-1 1v14a1 1 0 001 1z" />
+            </svg>
+          </div>
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- Bottom Footer Metadata Bar -->
+    <footer class="grid grid-cols-2 md:grid-cols-4 border-t border-ink pt-6 mt-4 gap-6">
+      
+      <!-- Col 1: Design Tagline -->
+      <div class="flex-shrink-0">
+        <span class="font-mono text-sm md:text-base font-bold text-ink uppercase tracking-wide">Words I Live In</span>
+        <p class="text-xs md:text-sm text-gray-500 leading-relaxed mt-1">
+          Everything seems impossible until it's done
+        </p>
+      </div>
+
+      <!-- Col 2: Comfort Zone Overlapping Logo -->
+      <div class="flex items-center justify-end md:justify-start gap-4">
+        <div class="text-right md:text-left flex-shrink-0">
+          <span class="font-mono text-sm md:text-base font-bold text-ink uppercase tracking-wide block">comfort zone</span>
+          <span class="text-xs md:text-sm text-gray-400 block font-mono mt-1">color spectrum</span>
+        </div>
+        <!-- Overlapping Venn circles -->
+        <div class="relative w-10 h-10 flex-shrink-0">
+          <div class="absolute top-0 left-0 w-7 h-7 rounded-full bg-[#ef233c] mix-blend-multiply opacity-80 animate-pulse"></div>
+          <div class="absolute bottom-0 right-0 w-7 h-7 rounded-full bg-[#3a86c8] mix-blend-multiply opacity-80"></div>
+        </div>
+      </div>
+
+      <!-- Col 3: Japanese footer block -->
+      <div class="flex flex-col justify-center text-left md:text-right font-mono">
+        <span class="text-sm md:text-base font-bold text-ink uppercase tracking-wide block">夢の世界へ戻る // 08/06/</span>
+        <span class="text-xs md:text-sm text-gray-500 mt-1">Return to the dreamland</span>
+      </div>
+
+      <!-- Col 4: Stylized barcode interface -->
+      <div class="flex justify-end items-center">
+        <svg id="barcode-svg" class="h-12 w-36 md:h-16 md:w-48 text-ink hover:scale-105 hover:text-[#ef233c] transition-all duration-300 cursor-pointer" fill="currentColor" viewBox="0 0 100 30" aria-label="Attic Barcode Link">
+          <!-- Realistic vertical lines barcode -->
+          <rect x="0" y="0" width="2" height="23"/>
+          <rect x="3" y="0" width="1" height="23"/>
+          <rect x="6" y="0" width="3" height="23"/>
+          <rect x="11" y="0" width="1" height="23"/>
+          <rect x="14" y="0" width="2" height="23"/>
+          <rect x="18" y="0" width="4" height="23"/>
+          <rect x="23" y="0" width="1" height="23"/>
+          <rect x="26" y="0" width="2" height="23"/>
+          <rect x="30" y="0" width="1" height="23"/>
+          <rect x="33" y="0" width="3" height="23"/>
+          <rect x="38" y="0" width="2" height="23"/>
+          <rect x="42" y="0" width="1" height="23"/>
+          <rect x="45" y="0" width="4" height="23"/>
+          <rect x="51" y="0" width="2" height="23"/>
+          <rect x="55" y="0" width="1" height="23"/>
+          <rect x="58" y="0" width="3" height="23"/>
+          <rect x="63" y="0" width="1" height="23"/>
+          <rect x="66" y="0" width="2" height="23"/>
+          <rect x="70" y="0" width="4" height="23"/>
+          <rect x="76" y="0" width="1" height="23"/>
+          <rect x="79" y="0" width="2" height="23"/>
+          <rect x="83" y="0" width="1" height="23"/>
+          <rect x="86" y="0" width="3" height="23"/>
+          <rect x="91" y="0" width="2" height="23"/>
+          <rect x="95" y="0" width="1" height="23"/>
+          <rect x="98" y="0" width="2" height="23"/>
+          <!-- Label number under lines -->
+          <text x="50" y="28" font-size="4.5" font-family="monospace" text-anchor="middle" letter-spacing="1">200806 01999</text>
+        </svg>
+      </div>
+
+    </footer>
+
+  </div>
+
+  <!-- Micro Interaction Script -->
+  <script src="tree.js"></script>
+</body>
+</html>
