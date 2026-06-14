@@ -86,7 +86,7 @@
     }
   </style>
 </head>
-<body class="bg-canvas text-ink antialiased min-h-screen flex flex-col justify-center py-6 px-4 md:px-8 selection:bg-rose-500 selection:text-white">
+<body class="bg-canvas text-ink antialiased min-h-screen flex flex-col justify-start md:justify-center py-6 px-4 md:px-8 selection:bg-rose-500 selection:text-white">
 
   <div class="max-w-7xl w-full mx-auto flex flex-col gap-8 md:gap-12 py-6 md:py-12">
     
@@ -217,43 +217,15 @@
 
       <!-- Col 4: Stylized barcode interface -->
       <div class="flex justify-end items-center">
-        <svg id="barcode-svg" class="h-12 w-36 md:h-16 md:w-48 text-ink hover:scale-105 hover:text-[#ef233c] transition-all duration-300 cursor-pointer" fill="currentColor" viewBox="0 0 100 30" aria-label="Attic Barcode Link">
-          <!-- Realistic vertical lines barcode -->
-          <rect x="0" y="0" width="2" height="23"/>
-          <rect x="3" y="0" width="1" height="23"/>
-          <rect x="6" y="0" width="3" height="23"/>
-          <rect x="11" y="0" width="1" height="23"/>
-          <rect x="14" y="0" width="2" height="23"/>
-          <rect x="18" y="0" width="4" height="23"/>
-          <rect x="23" y="0" width="1" height="23"/>
-          <rect x="26" y="0" width="2" height="23"/>
-          <rect x="30" y="0" width="1" height="23"/>
-          <rect x="33" y="0" width="3" height="23"/>
-          <rect x="38" y="0" width="2" height="23"/>
-          <rect x="42" y="0" width="1" height="23"/>
-          <rect x="45" y="0" width="4" height="23"/>
-          <rect x="51" y="0" width="2" height="23"/>
-          <rect x="55" y="0" width="1" height="23"/>
-          <rect x="58" y="0" width="3" height="23"/>
-          <rect x="63" y="0" width="1" height="23"/>
-          <rect x="66" y="0" width="2" height="23"/>
-          <rect x="70" y="0" width="4" height="23"/>
-          <rect x="76" y="0" width="1" height="23"/>
-          <rect x="79" y="0" width="2" height="23"/>
-          <rect x="83" y="0" width="1" height="23"/>
-          <rect x="86" y="0" width="3" height="23"/>
-          <rect x="91" y="0" width="2" height="23"/>
-          <rect x="95" y="0" width="1" height="23"/>
-          <rect x="98" y="0" width="2" height="23"/>
-          <!-- Label number under lines -->
-          <text x="50" y="28" font-size="4.5" font-family="monospace" text-anchor="middle" letter-spacing="1">200806 01999</text>
-        </svg>
+        <svg id="barcode-svg" class="h-12 w-36 md:h-16 md:w-48 text-ink hover:scale-105 hover:text-[#ef233c] transition-all duration-300 cursor-pointer" aria-label="Attic Barcode Link"></svg>
       </div>
 
     </footer>
 
   </div>
 
+  <!-- JsBarcode Library for Scannable Barcode -->
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
   <!-- Micro Interaction Script -->
   <script src="index.js"></script>
 </body>
